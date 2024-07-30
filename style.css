@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+body{
+   font-family: "Poppins";
+   background-color: #48A30012;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: -5px;
+}
+.main{
+    margin-top: -30px;
+}
+.heading{
+    color: #48A300;
+}
+.heading span{
+    color: #a18089f0;
+}
+
+.card{
+    max-width: 660px;
+    padding: 1em;
+    margin-inline: auto;
+    padding: 16px 21px;
+}
+.tittle{
+    background-color: #a18089f0;
+    padding: 5px;
+    margin-block: 1em;
+    border-radius: 10px;
+}
+
+.today{
+    color: #EEFFE0;
+    font-weight: 700;
+    padding-left: 15px;
+}
+.img img{
+    vertical-align: middle;
+    position: relative;
+    animation: myMove 10s infinite;
+    margin-left: 16px;
+}
+@keyframes myMove{
+    100% {transform: rotate(360deg);}
+}
+.img svg{
+    position: relative;
+    left: -36px;
+    top: 1px;
+}
+.progress-label{
+    padding-left: 15px;
+    font-size: 14px;
+    color:#ffff;
+    margin-bottom: 18px;
+}
+.progress-bar{
+    height: 25px;
+    background-color: #48A3001A;
+    border-radius: 15px;
+   
+}
+.progress{
+    height: inherit;
+    border-radius: 15px;
+    background-color: #48A300;
+    font-weight: 500;
+    font-size: 10px;
+    color: #EEFFE0;
+    display: flex;
+    align-items: center;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s ease-in-out;
+}
+.progress span{
+    padding-left: 20px;
+    min-width: max-content;
+}
+.goal-text{
+    font-size: 14px;
+    font-weight: 400;
+    color: #FF5151;
+    margin-block: 16px;
+}
+.goal-container{
+    height: 82px;
+    background-color:#a18089f0 ;
+    margin-bottom: 16px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0  22px;
+}
+.check-box{
+    height: 24px;
+    width: 24px;
+    border: 2px solid #EEFFE0;
+    border-radius: 50%;
+    margin-right: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.check-icon{
+    display: none;
+}
+.goal-input{
+    border: none;
+    width: 60%;
+    font-family: inherit;
+    background-color: #a18089f0;
+    font-size: 16px;
+    border-radius: 5px;
+    flex-grow: 1;
+    align-self: stretch;
+    cursor: pointer;
+    font-weight: 500;
+}
+.goal-input::placeholder{
+    color: #eeffe02c;
+}
+.goal-input:focus{
+    outline: none;
+    color: #ffff;
+}
+.end-text{
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.completed .check-icon{
+    display: block;
+}
+.completed .goal-input{
+    color: #ffff;
+    text-decoration: line-through;
+}
+.goal-text{
+    display: none;
+}
+.goalText{
+    display: block;
+}
+
+@media (max-width : 768px ) {
+    h1{
+        font-size: 2rem;
+    }
+    .card{
+        padding: 16px 32px;
+    }
+    .progress-bar{
+        height: 15px;
+    }
+}
